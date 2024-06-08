@@ -1,0 +1,66 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="main-container">
+      <form
+        action="/upload"
+        method="post"
+        style="display: grid"
+        enctype="multipart/form-data"
+        id="uploadForm"
+      >
+        <div class="drop-box">
+          <img src="/images/icons8-file-48.png" alt="File Icon" style="height: 100px; width: 100px;"><br><br>
+          <label for="file" class="file-label">
+            Upload your files here, <span id="browse-elements"><button id="browseButton">Browse</button></span>
+          </label>
+          <input type="file" id="file" name="file" required /><br />
+        </div><br><br>
+
+        <div class="linkPage">
+          <% if (locals.fileLink != null) { %>
+            <div id="link-container">
+              <a id="link" href="<%= locals.fileLink %>"><%= locals.fileLink %></a>
+              <span class="icon" id="copy-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" height="48" width="48">
+                  <path d="M9 43.95q-1.2 0-2.1-.9-.9-.9-.9-2.1V10.8h3v30.15h23.7v3Zm6-6q-1.2 0-2.1-.9-.9-.9-.9-2.1v-28q0-1.2.9-2.1.9-.9 2.1-.9h22q1.2 0 2.1.9.9.9.9 2.1v28q0 1.2-.9 2.1-.9.9-2.1.9Zm0-3h22v-28H15v28Zm0 0v-28 28Z"/>
+                </svg>
+              </span>
+            </div>
+          <% } %>
+        </div>
+
+        <div class="pass">
+          
+        <div id="option-password" class="form-group">
+          <input type="checkbox" id="show-password" />
+          <label for="show-password">Want to apply Password</label>
+        </div><br>
+
+        <div id="password-section" >
+          <label for="">Your Password</label>
+          <input type="password" id="password" name="password" /><br />
+        </div><br>
+
+        </div>
+      
+        <div class="form-group">
+          <!-- <button  class="Link-button">Create Link</button> -->
+          <button class="Link-button" type="submit">
+            <span>Create Link</span>
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <script src="/js/script.js"></script>
+  </body>
+</html>

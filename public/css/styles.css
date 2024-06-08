@@ -1,0 +1,188 @@
+
+
+:root{
+    --maing-bg-color:#a7c7f7;
+    --border-color: #a7c7f7;
+     --container-width: 500px
+
+}
+
+
+body {
+    font-family: poppins, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--maing-bg-color);
+    color: white;
+    margin: 0;
+    font-size: 18px;
+  }
+  .parent-container
+  {
+    padding: 100px;
+  }
+  
+  .main-container { 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    color: black;
+    padding: 50px;
+
+    border-radius: 30px;
+    transition: all .2s ease ; 
+  }
+  
+  .drop-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid #a7c7f7;
+    padding: 20px 80px;
+    border-radius: 10px;
+    font-size: 25px;
+    transition: all .2s ease ; 
+  }
+
+  /* #Link-button{
+   max-width: 100px;
+     
+  }
+   */
+  #file {
+    display: none;
+  }
+
+  #browseButton {
+    color: #4b91f9;
+    font-size: 25px;
+  }
+  .pass{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #browseButton:hover {
+    cursor: pointer;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #password-section{
+ 
+    display: none;
+    transition: all 1s ease;
+ }
+  
+  #option-password,  #Link-button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  #password{
+    border: 1px solid white;
+    border-bottom: 2px solid var(--border-color) ;
+    outline: none;
+     
+  }
+
+
+  
+
+ 
+button {
+    border: none;
+    background: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    font-family: inherit;
+    border-radius: 2px;
+  }
+
+  .Link-button {
+    min-width: 62px;
+ 
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 16px;
+    background-color: #4b91f9;
+    transition: background-color .4s;
+  }
+  
+  .Link-button span {
+    color: white;
+    line-height: 1;
+    transition: color .4s;
+  }
+  
+  .Link-button:hover {
+  
+    background: linear-gradient(90deg, #4b91f9 50%, transparent 0) repeat-x,
+          linear-gradient(90deg, #4b91f9 50%, transparent 0) repeat-x,
+          linear-gradient(0deg, #4b91f9 50%, transparent 0) repeat-y,
+          linear-gradient(0deg, #4b91f9 50%, transparent 0) repeat-y;
+    background-size: 6px 2px, 6px 2px, 2px 6px, 2px 6px;
+    background-position: 0 0, 0 100%, 0 0, 100% 0;
+    animation: linearGradientMove .4s infinite linear;
+    cursor: pointer;
+  }
+  
+  .Link-button:hover span {
+    color: #4b91f9;
+    
+  }
+  
+  @keyframes linearGradientMove {
+    100% {
+      background-position: 6px 0, -6px 100%, 0 -6px, 100% 6px;
+    }
+  }
+
+#copy-icon:hover{
+cursor: pointer;
+}
+
+  #link-container {
+    display: flex;
+    align-items: center;
+    border: 3px dashed var(--border-color);
+    padding: 10px;
+    border-radius: 5px;
+    background-color: white;
+    transition: all 0.3s ease;
+  }
+  
+  #link {
+    color: grey;
+    text-decoration: none;
+    margin-right: 10px;
+  }
+  
+  .icon {
+    display: flex;
+    align-items: center;
+  }
+  
+  .icon svg {
+    fill: grey;
+  }
+
+
+  
