@@ -17,21 +17,21 @@ app.set("view engine", "ejs");
 app.use(express.static(path.join(__dirname, 'public')));
 app.set("views", path.resolve("./views"));
 
-// mongoose.connect(process.env.DATABASE_URL)
-//   .then(() => {
-//     console.log("mongodb connected");
-//   })
-//   .catch(err => {
-//     console.error("Failed to connect to MongoDB:", err);
-//   });
-
-  mongoose.connect("mongodb://127.0.0.1:27017/filedb")
+mongoose.connect(process.env.DATABASE_URL)
   .then(() => {
     console.log("mongodb connected");
   })
   .catch(err => {
     console.error("Failed to connect to MongoDB:", err);
   });
+
+  // mongoose.connect("mongodb://127.0.0.1:27017/filedb")
+  // .then(() => {
+  //   console.log("mongodb connected");
+  // })
+  // .catch(err => {
+  //   console.error("Failed to connect to MongoDB:", err);
+  // });
 
 
 app.get("/", (req, res) => {
